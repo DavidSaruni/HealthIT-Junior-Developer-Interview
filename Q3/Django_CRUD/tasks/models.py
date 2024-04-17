@@ -8,3 +8,8 @@ class Task(models.Model):
 
     def __str__(self):
         return self.title
+
+# sort the tasks in descending order
+def sort_tasks():
+    tasks = Task.objects.all().order_by('-created')
+    return tasks
