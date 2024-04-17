@@ -1,0 +1,13 @@
+
+<div class="center-column">
+    <div class="item-row">
+        <p>Are You sure you want to delete "{{item}}"?</p>
+    </div>
+   
+    <a class="btn btn-success" href="{% url 'list' %}">Cancel</a>
+
+    <form method="post" action="">
+        {% csrf_token %}
+        <input class="btn btn-danger" type="submit" name="Confirm" value="Confirm">
+    </form>
+</div>

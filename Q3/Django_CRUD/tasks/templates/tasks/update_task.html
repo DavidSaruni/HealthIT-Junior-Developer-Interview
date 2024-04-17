@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update Task</title>
+    
+</head>
+<body>
+    <div class="center-column">
+
+        <h3>Update Task</h3>
+        <div class="item-row">
+            <form method="post" action="">
+                {% csrf_token %}
+        
+                {{form}}
+                <a class="btn btn-success" href="{% url 'list' %}">Cancel</a>
+                <input class="btn btn-info" type="submit" name="Update Task">
+            </form>
+        </div>
+        
+    </div>
+</body>
+</html>
