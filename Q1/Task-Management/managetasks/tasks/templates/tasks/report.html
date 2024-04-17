@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    
+<style>
+    body{
+        background-color: #638CBB;
+    }
+    input{
+        width: 100%;
+        padding: 12px 26px;
+        margin: 8px 0;
+        box-sizing: border-box;
+    }
+    input::placeholder {
+        color: #d3d3d3;
+    }
+    .center-column{
+        width: 1000px;
+        margin: 20px auto;
+        padding: 20px;
+        background-color: #fff;
+        border-radius: 3px;
+        box-shadow: 6px 2px 30px 8px rgba(0,0,0,0.75);
+    }
+    .item-row{
+        background-color: #906abd;
+        margin: 5px;
+        padding: 20px;
+        border-radius: 3px;
+        color: #fff;
+        font-size: 16px;
+        box-shadow: 0px -1px 10px -4px rgba(0, 0, 0, 0.75);
+    }
+    .btn-danger{
+        background-color: #ffae19;
+        border-color: #e59400;
+    }
+</style>
+
+<div class="center-column">
+    <h3>Tasks For the last 6 months</h3>
+    
+    <div class="to-do-list">
+        <div class="item-row">
+            <table border="solid">
+                <tr style="font-style: bold; color: black;">
+                    <th>Task</th>
+                    <th>Priority</th>
+                    <th>Status</th>
+                    <th>Date Created</th>
+                </tr>
+                {% for task in tasks %}
+                <tr>
+                    <td>{{task.name}}</td>
+                    <td>{{task.priority}}</td>
+                    <td>{{task.status}}</td>
+                    <td>{{task.date}}</td>
+                    
+                </tr>
+                {% endfor %}
+            </table>
+            
+        </div>
+
+    </div>
+</div>
+</body>
+</html>
